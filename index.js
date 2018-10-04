@@ -42,6 +42,7 @@ function connect() {
     impu: "sip:sipML5@172.16.16.45:8089", // mandatory: valid SIP Uri (IMS Public Identity)
     password: "test123", // optional
     display_name: "sk", // optional
+    websocket_proxy_url: 'wss://172.16.16.45:8089/ws',
     events_listener: { events: "*", listener: eventsListener },
     sip_headers: [
       { name: "User-Agent", value: "IM-client/OMA1.0 sipML5-v1.0.0.0" },
