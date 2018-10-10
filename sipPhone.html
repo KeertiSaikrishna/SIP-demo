@@ -4,14 +4,6 @@
 <head>
     <title>Sip Phone Demo</title>
     <meta charset="utf-8" />
-    <title>sipML5 Programmer's guide</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="Keywords" content="doubango, sipML5, VoIP, HTML5, WebRTC, RTCWeb, SIP, IMS, Video chat, VP8, live demo " />
-    <meta name="Description" content="HTML5 SIP client using WebRTC framework" />
-    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <meta name="author" content="Doubango Telecom" />
-
-    <!-- Styles -->
     <link href="./assets/css/bootstrap.css" rel="stylesheet" />
     <link href="./assets/css/bootstrap-responsive.css" rel="stylesheet" />
     <style type="text/css">
@@ -20,44 +12,30 @@
             padding-bottom: 40px;
         }
     </style>
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="assets/ico/favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png" />
-    <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png" />
 </head>
 
 <body onload="connect()">
     <div class='container'>
         <h3>Call flow</h3>
+        <p id="showConnectionStatus">connected</p>
+        <p id="showCallStatus"></p>
         <table>
-            <tr>
-                <td>
-                    <input type="text" id="extension">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button id="call" onclick='callEvent()'> Call</button>
-                    <button id="hangup" disabled='true' onclick="hangupEvent()">hangup</button>
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text" id="extension">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="call" onclick='callEvent()'> call</button>
+                        <button id="hangup" disabled='true' onclick="hangUpEvent()">hangup</button>
+                    </td>
+                </tr>
+            </tbody>
         </table>
+        <audio id="audio-remote" autoplay="autoplay"></audio>
     </div>
-    <script type="text/javascript" src="./assets/js/jquery.js"></script>
-    <script type="text/javascript" src="./assets/js/bootstrap-transition.js"></script>
-    <script type="text/javascript" src="./assets/js/bootstrap-alert.js"></script>
-    <script type="text/javascript" src="./assets/js/bootstrap-modal.js"></script>
-    <script type="text/javascript" src="./assets/js/bootstrap-dropdown.js"></script>
-    <script type="text/javascript" src="./assets/js/bootstrap-scrollspy.js"></script>
-    <script type="text/javascript" src="./assets/js/bootstrap-tab.js"></script>
-    <script type="text/javascript" src="./assets/js/bootstrap-tooltip.js"></script>
-    <script type="text/javascript" src="./assets/js/bootstrap-popover.js"></script>
-    <script type="text/javascript" src="./assets/js/bootstrap-button.js"></script>
-    <script type="text/javascript" src="./assets/js/bootstrap-collapse.js"></script>
-    <script type="text/javascript" src="./assets/js/bootstrap-carousel.js"></script>
-    <script type="text/javascript" src="./assets/js/bootstrap-typeahead.js"></script>
     <script src="./scripts/index.js"></script>
     <script type='text/javascript' src='https://www.doubango.org/click2dial/c2c-api.js'></script>
 </body>
